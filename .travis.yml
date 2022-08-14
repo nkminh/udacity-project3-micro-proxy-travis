@@ -23,16 +23,16 @@ script:
   - docker build -t reverseproxy ./udagram-reverseproxy
 
   # Tagging
-  - docker tag udagram-api-feed minhnk/udagram-api-feed:v1
-  - docker tag udagram-api-user minhnk/udagram-api-user:v1
-  - docker tag udagram-frontend minhnk/udagram-frontend:v1
-  - docker tag reverseproxy minhnk/reverseproxy:v1
+  - docker tag udagram-api-feed minhnk/udagram-api-feed:v2
+  - docker tag udagram-api-user minhnk/udagram-api-user:v2
+  - docker tag udagram-frontend minhnk/udagram-frontend:v2
+  - docker tag reverseproxy minhnk/reverseproxy:v2
   # - docker tag simple-node minhnk/simple-node:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push minhnk/udagram-api-feed:v1
-  - docker push minhnk/udagram-api-user:v1
-  - docker push minhnk/udagram-frontend:v1
-  - docker push minhnk/reverseproxy:v1
+  - docker push minhnk/udagram-api-feed:v2
+  - docker push minhnk/udagram-api-user:v2
+  - docker push minhnk/udagram-frontend:v2
+  - docker push minhnk/reverseproxy:v2
   # - docker push minhnk/simple-node
