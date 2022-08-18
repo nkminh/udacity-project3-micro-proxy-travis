@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-api-feed
-        image: minhnk/udagram-api-feed:v2
+        image: minhnk/udagram-api-feed:v3
         ports:
         - containerPort: 8080
         envFrom:

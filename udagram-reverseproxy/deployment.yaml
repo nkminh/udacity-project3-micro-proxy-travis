@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: minhnk/reverseproxy:v7
+        image: minhnk/reverseproxy:v11
         ports:
         - containerPort: 8080

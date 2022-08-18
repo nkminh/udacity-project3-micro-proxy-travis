@@ -7,6 +7,10 @@ console.log('config.aws_profile' + config.aws_profile);
 
 // Configure AWS
 const credentials = new AWS.SharedIniFileCredentials({profile: config.aws_profile});
+console.log('-----------start credentials-------------');
+console.log(credentials);
+console.log(JSON.stringify(credentials));
+console.log('-----------end credentials-------------');
 AWS.config.credentials = credentials;
 
 export const s3 = new AWS.S3({
